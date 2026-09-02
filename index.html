@@ -39,9 +39,15 @@
         <a href="#about" class="header__link">about</a>
         <a href="#contact" class="header__link">contact</a>
       </nav>
-      <button class="header__toggle" id="header-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__controls">
+        <button class="header__bgm" id="header-bgm-toggle" type="button" aria-label="Toggle retro music" title="Toggle 8-bit Background Music">
+          <span class="bgm-icon">♫</span>
+          <span class="bgm-state-text">BGM: OFF</span>
+        </button>
+        <button class="header__toggle" id="header-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -56,7 +62,7 @@
             <div class="hero__badges">
               <span class="hero__badge">Available for work</span>
               <span class="hero__badge hero__badge--teal">Gurugram, IN</span>
-              <span class="hero__badge hero__badge--orange">2026 Grad</span>
+              <span class="hero__badge hero__badge--orange">2025 Grad</span>
             </div>
           </div>
           <img src="assets/images/pixel-avatar.jpg" alt="Harshit Verma - Pixel Art Portrait" class="hero__avatar">
@@ -500,6 +506,17 @@
       <p class="footer__bottom">© 2026 Harshit Verma · Built with HTML, CSS & JS · No frameworks needed</p>
     </div>
   </footer>
+
+  <!-- Floating 8-Bit BGM Widget -->
+  <div class="bgm-widget" id="bgm-widget">
+    <button id="bgm-toggle" class="bgm-btn" type="button" aria-label="Toggle retro background music" title="Toggle 8-Bit Background Music">
+      <span class="bgm-icon">♫</span>
+      <span class="bgm-text">8-BIT BGM: <strong id="bgm-state">OFF</strong></span>
+      <span class="bgm-bars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </span>
+    </button>
+  </div>
 
   <script src="scripts/main.js"></script>
 </body>
