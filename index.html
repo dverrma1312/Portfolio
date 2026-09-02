@@ -1,415 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Harshit Verma — Backend Software Engineer</title>
-  <meta name="description" content="Backend Software Engineer specializing in Python, Django, and Django REST Framework. Building production-grade APIs, real-time systems, and scalable architectures.">
+  <meta name="description" content="Portfolio of Harshit Verma, Backend Software Engineer specializing in Python, Django, PostgreSQL.">
   
+  <!-- Open Graph -->
   <meta property="og:title" content="Harshit Verma — Backend Software Engineer">
-  <meta property="og:description" content="Backend Software Engineer specializing in Python, Django, and Django REST Framework. Building production-grade APIs, real-time systems, and scalable architectures.">
+  <meta property="og:description" content="Portfolio of Harshit Verma, Backend Software Engineer specializing in Python, Django, PostgreSQL.">
   <meta property="og:type" content="website">
   
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Harshit Verma — Backend Software Engineer">
-  <meta name="twitter:description" content="Backend Software Engineer specializing in Python, Django, and Django REST Framework. Building production-grade APIs, real-time systems, and scalable architectures.">
+  <meta name="twitter:description" content="Portfolio of Harshit Verma, Backend Software Engineer specializing in Python, Django, PostgreSQL.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   
-  <!-- Styles -->
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css">
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230d1117%22/><text x=%2250%22 y=%2250%22 font-family=%22monospace%22 font-size=%2260%22 font-weight=%22bold%22 fill=%22%2300ffff%22 dominant-baseline=%22central%22 text-anchor=%22middle%22>HV</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><text y='70' x='15' font-family='monospace' font-weight='bold' font-size='60' fill='%23FF6B35'>HV</text></svg>">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="container nav__inner">
-      <a href="#" class="nav__logo"><span>HV</span>.dev</a>
-      <div id="nav-menu" class="nav__menu">
-        <a href="#about" class="nav__link">About</a>
-        <a href="#projects" class="nav__link">Projects</a>
-        <a href="#skills" class="nav__link">Skills</a>
-        <a href="#experience" class="nav__link">Experience</a>
-        <a href="#contact" class="nav__link nav__cta">Contact</a>
-      </div>
-      <button id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation menu">
+  <header id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__name">Harshit<span>✦</span>Verma</a>
+      <nav class="header__nav" id="header-nav">
+        <a href="#projects" class="header__link">projects</a>
+        <a href="#skills" class="header__link">skills</a>
+        <a href="#experience" class="header__link">experience</a>
+        <a href="#about" class="header__link">about</a>
+        <a href="#contact" class="header__link">contact</a>
+      </nav>
+      <button class="header__toggle" id="header-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="section">
-    <div class="container">
-      <div class="hero__badge">
-        <span style="background: green; border-radius: 50%; width: 8px; height: 8px; display: inline-block;"></span>
-        Available for work
+  <main>
+    <section id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class="hero__subtitle">Backend Software Engineer<span class="hero__cursor"></span></p>
+            <p class="hero__subtitle">Python · Django · PostgreSQL</p>
+            <p class="hero__subtitle">Building systems you never see</p>
+            <div class="hero__badges">
+              <span class="hero__badge">Available for work</span>
+              <span class="hero__badge hero__badge--teal">Gurugram, IN</span>
+              <span class="hero__badge hero__badge--orange">2026 Grad</span>
+            </div>
+          </div>
+          <img src="assets/images/pixel-avatar.jpg" alt="Harshit Verma - Pixel Art Portrait" class="hero__avatar">
+        </div>
       </div>
-      <h1 class="hero__title">I build the <span class="accent">systems</span> you <span class="serif-italic">never</span> see.</h1>
-      <div class="hero__typing-wrapper">
-        <p>Specializing in <span id="typing-text" class="hero__typing"></span></p>
-      </div>
-      <p class="hero__description">
-        Backend Software Engineer crafting production-grade APIs, real-time messaging systems, and scalable architectures with Django, PostgreSQL, and Redis.
-      </p>
-      <div class="hero__cta-group">
-        <a href="#projects" class="btn btn--primary">View My Work</a>
-        <a href="#contact" class="btn btn--outline">Get In Touch</a>
-      </div>
-      <div class="hero__scroll-indicator">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent" style="color: var(--accent-color, #00ffff);"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-label">// about me</div>
-      <div class="about__grid reveal reveal--left">
-        <div class="about__image-wrapper">
-          <img src="assets/images/avatar.jpg" alt="Harshit Verma" class="about__image">
-        </div>
-        <div class="about__text">
-          <h2>Backend engineer who cares about <span class="gradient-text">architecture</span></h2>
-          <p>
-            I'm Harshit, a backend software engineer specializing in Python, Django, and Django REST Framework. I ship full-stack, production-grade applications end to end — from relational data modeling and REST API design to asynchronous task processing, real-time WebSocket systems, and containerized deployments on AWS.
-          </p>
-          <p>
-            My approach is systems-first: I design database schemas that scale, APIs that are intuitive, and infrastructure that's reliable. Whether it's implementing gender-ratio balancing algorithms, building real-time chat with Django Channels, or enforcing server-side price integrity at checkout — I focus on getting the architecture right.
-          </p>
-        </div>
-      </div>
-      <div class="about__stats">
-        <div class="stat-card reveal">
-          <span class="stat-card__number mono">2+</span>
-          <span class="stat-card__label">Production Apps Deployed</span>
-        </div>
-        <div class="stat-card reveal">
-          <span class="stat-card__number mono">15+</span>
-          <span class="stat-card__label">REST API Endpoints Shipped</span>
-        </div>
-        <div class="stat-card reveal">
-          <span class="stat-card__number mono">94th</span>
-          <span class="stat-card__label">Percentile — CAT 2025</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="pixel-separator" aria-hidden="true">✦ ✦ ✦ ✦ ✦</div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-label">// featured projects</div>
-      <h2>Things I've <span class="gradient-text">built</span></h2>
-      <div class="projects__grid">
-        
-        <!-- Project 1: Blunt 2.0 -->
-        <article class="project-card reveal reveal--left">
-          <div class="project-card__header">
-            <div>
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-number">01. (featured projects)</div>
+        <div class="projects__grid">
+          <!-- Project 1: Blunt 2.0 -->
+          <article class="project-card reveal">
+            <div class="project-card__header">
               <h3 class="project-card__title">Blunt 2.0</h3>
-              <p class="project-card__subtitle">Category-Based Dating Web Application — 2026</p>
+              <p class="project-card__subtitle">Category-Based Dating App — 2026</p>
             </div>
-            <div class="project-card__links">
-              <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="project-card__link" aria-label="View on GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-card__badges">
-            <span class="badge badge--cyan">Django</span>
-            <span class="badge badge--cyan">DRF</span>
-            <span class="badge badge--cyan">Channels</span>
-            <span class="badge badge--amber">React</span>
-            <span class="badge badge--cyan">PostgreSQL</span>
-            <span class="badge badge--cyan">Redis</span>
-            <span class="badge badge--cyan">Celery</span>
-          </div>
-          <div class="project-card__content">
-            <div class="project-card__description">
-              <ul>
-                <li>Architected a modular DRF backend serving a decoupled React frontend over REST and WebSocket APIs across 7+ endpoints</li>
-                <li>Designed a database-driven gender-ratio balancing system that gates signups per intent category using live seat counts</li>
-                <li>Automated discovery with Celery Beat — daily pool regeneration at 8:00 AM IST, match expiration at midnight</li>
-                <li>Built low-latency real-time messaging with Django Channels and Redis-backed WebSockets</li>
-                <li>Implemented passwordless OTP auth via Twilio and stateless JWT with SimpleJWT</li>
-              </ul>
-            </div>
-            <div class="terminal">
-              <div class="terminal__header">
-                <span class="terminal__dot" style="background:#ff5f57"></span>
-                <span class="terminal__dot" style="background:#ffbd2e"></span>
-                <span class="terminal__dot" style="background:#28c840"></span>
-                <span class="terminal__title">api-endpoints.sh</span>
+            <div class="project-card__body">
+              <div class="project-card__badges">
+                <span class="project-card__badge">Django</span>
+                <span class="project-card__badge">DRF</span>
+                <span class="project-card__badge">Channels</span>
+                <span class="project-card__badge">React</span>
+                <span class="project-card__badge">PostgreSQL</span>
+                <span class="project-card__badge">Redis</span>
+                <span class="project-card__badge">Celery</span>
               </div>
-              <div class="terminal__body">
-                <span class="terminal__line"><span class="terminal__comment"># Discovery API</span></span>
-                <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X POST /api/v1/discovery/refresh/</span>
-                <span class="terminal__line"><span class="terminal__output">→ Celery Beat regenerates pools daily at 08:00 IST</span></span>
-                <span class="terminal__line"></span>
-                <span class="terminal__line"><span class="terminal__comment"># Real-time messaging</span></span>
-                <span class="terminal__line"><span class="terminal__prompt">$ </span>wscat -c ws://api/ws/chat/<span class="terminal__highlight">{room_id}</span>/</span>
-                <span class="terminal__line"><span class="terminal__output">→ Redis-backed channels, mutual-match gated</span></span>
-                <span class="terminal__line"></span>
-                <span class="terminal__line"><span class="terminal__comment"># Auth flow</span></span>
-                <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X POST /api/v1/auth/otp/verify/</span>
-                <span class="terminal__line"><span class="terminal__output">→ Passwordless OTP → JWT token pair</span></span>
+              <div class="project-card__description">
+                <ul>
+                  <li>Architected a modular DRF backend serving a decoupled React frontend over REST and WebSocket APIs across 7+ endpoints</li>
+                  <li>Designed a database-driven gender-ratio balancing system that gates signups per intent category using live seat counts</li>
+                  <li>Automated discovery with Celery Beat — daily pool regeneration at 8:00 AM IST, match expiration at midnight</li>
+                  <li>Built low-latency real-time messaging with Django Channels and Redis-backed WebSockets</li>
+                  <li>Implemented passwordless OTP auth via Twilio and stateless JWT with SimpleJWT</li>
+                </ul>
+              </div>
+              <div class="terminal">
+                <div class="terminal__header">
+                  <span class="terminal__dot" style="background:#ff5f57"></span>
+                  <span class="terminal__dot" style="background:#ffbd2e"></span>
+                  <span class="terminal__dot" style="background:#28c840"></span>
+                  <span class="terminal__title">api-endpoints.sh</span>
+                </div>
+                <div class="terminal__body">
+                  <span class="terminal__line"><span class="terminal__comment"># Discovery API</span></span>
+                  <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X POST /api/v1/discovery/refresh/</span>
+                  <span class="terminal__line"><span class="terminal__output">→ Celery Beat regenerates pools daily at 08:00 IST</span></span>
+                  <span class="terminal__line"></span>
+                  <span class="terminal__line"><span class="terminal__comment"># Real-time messaging</span></span>
+                  <span class="terminal__line"><span class="terminal__prompt">$ </span>wscat -c ws://api/ws/chat/<span class="terminal__highlight">{room_id}</span>/</span>
+                  <span class="terminal__line"><span class="terminal__output">→ Redis-backed channels, mutual-match gated</span></span>
+                </div>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="project-card__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 2: DarjiGhar -->
-        <article class="project-card reveal reveal--right">
-          <div class="project-card__header">
-            <div>
+          <!-- Project 2: DarjiGhar -->
+          <article class="project-card reveal">
+            <div class="project-card__header project-card__header--teal">
               <h3 class="project-card__title">DarjiGhar</h3>
-              <p class="project-card__subtitle">Bespoke Tailoring E-Commerce Platform — 2026</p>
+              <p class="project-card__subtitle">Bespoke Tailoring E-Commerce — 2026</p>
             </div>
-            <div class="project-card__links">
-              <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="project-card__link" aria-label="View on GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-              <a href="#" target="_blank" rel="noopener" class="project-card__link" aria-label="Live Demo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-card__badges">
-            <span class="badge badge--cyan">Django</span>
-            <span class="badge badge--cyan">DRF</span>
-            <span class="badge badge--amber">React</span>
-            <span class="badge badge--amber">LLM API</span>
-            <span class="badge badge--cyan">PostgreSQL</span>
-            <span class="badge badge--cyan">Docker</span>
-            <span class="badge badge--cyan">EC2</span>
-          </div>
-          <div class="project-card__content">
-            <div class="project-card__description">
-              <ul>
-                <li>Built and deployed a full-stack e-commerce platform for custom tailoring on AWS EC2 with Docker, Nginx, and Gunicorn</li>
-                <li>Designed relational data models and REST APIs for categories, products, customization options, measurements, carts, and orders</li>
-                <li>Enforced server-side price integrity by recomputing order totals from database records, blocking client-side tampering</li>
-                <li>Modeled dynamic collar, cuff, fabric customization with JSONField and optimized nested catalog queries</li>
-                <li>Offloaded email notifications to Celery workers backed by Redis to keep request latency low</li>
-              </ul>
-            </div>
-            <div class="terminal">
-              <div class="terminal__header">
-                <span class="terminal__dot" style="background:#ff5f57"></span>
-                <span class="terminal__dot" style="background:#ffbd2e"></span>
-                <span class="terminal__dot" style="background:#28c840"></span>
-                <span class="terminal__title">architecture.sh</span>
+            <div class="project-card__body">
+              <div class="project-card__badges">
+                <span class="project-card__badge">Django</span>
+                <span class="project-card__badge">DRF</span>
+                <span class="project-card__badge">React</span>
+                <span class="project-card__badge">LLM API</span>
+                <span class="project-card__badge">PostgreSQL</span>
+                <span class="project-card__badge">Docker</span>
+                <span class="project-card__badge">EC2</span>
               </div>
-              <div class="terminal__body">
-                <span class="terminal__line"><span class="terminal__comment"># Deployment stack</span></span>
-                <span class="terminal__line"><span class="terminal__prompt">$ </span>docker-compose up -d</span>
-                <span class="terminal__line"><span class="terminal__output">→ Nginx → Gunicorn → Django → PostgreSQL</span></span>
-                <span class="terminal__line"></span>
-                <span class="terminal__line"><span class="terminal__comment"># Price integrity check</span></span>
-                <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X POST /api/v1/orders/checkout/</span>
-                <span class="terminal__line"><span class="terminal__output">→ Server recomputes totals from DB records</span></span>
-                <span class="terminal__line"><span class="terminal__output">→ Blocks client-side price tampering</span></span>
-                <span class="terminal__line"></span>
-                <span class="terminal__line"><span class="terminal__comment"># Async workers</span></span>
-                <span class="terminal__line"><span class="terminal__prompt">$ </span>celery -A config worker -l info</span>
-                <span class="terminal__line"><span class="terminal__output">→ Email notifications offloaded to background</span></span>
+              <div class="project-card__description">
+                <ul>
+                  <li>Built and deployed a full-stack e-commerce platform for custom tailoring on AWS EC2 with Docker, Nginx, and Gunicorn</li>
+                  <li>Designed relational data models and REST APIs for categories, products, customization options, measurements, carts, and orders</li>
+                  <li>Enforced server-side price integrity by recomputing order totals from database records, blocking client-side tampering</li>
+                  <li>Modeled dynamic collar, cuff, fabric customization with JSONField and optimized nested catalog queries</li>
+                  <li>Offloaded email notifications to Celery workers backed by Redis to keep request latency low</li>
+                </ul>
+              </div>
+              <div class="terminal">
+                <div class="terminal__header">
+                  <span class="terminal__dot" style="background:#ff5f57"></span>
+                  <span class="terminal__dot" style="background:#ffbd2e"></span>
+                  <span class="terminal__dot" style="background:#28c840"></span>
+                  <span class="terminal__title">architecture.sh</span>
+                </div>
+                <div class="terminal__body">
+                  <span class="terminal__line"><span class="terminal__comment"># Deployment stack</span></span>
+                  <span class="terminal__line"><span class="terminal__prompt">$ </span>docker-compose up -d</span>
+                  <span class="terminal__line"><span class="terminal__output">→ Nginx → Gunicorn → Django → PostgreSQL</span></span>
+                  <span class="terminal__line"></span>
+                  <span class="terminal__line"><span class="terminal__comment"># Price integrity check</span></span>
+                  <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X POST /api/v1/orders/checkout/</span>
+                  <span class="terminal__line"><span class="terminal__output">→ Server recomputes totals from DB records</span></span>
+                </div>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="project-card__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="project-card__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
               </div>
             </div>
+          </article>
+        </div>
+        <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="view-more">(view more on github)</a>
+      </div>
+    </section>
+
+    <div class="pixel-separator" aria-hidden="true">✦ ✦ ✦ ✦ ✦</div>
+
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section-number">02. (skill tree)</div>
+        <div class="skills__grid">
+          <!-- Category 1: Backend & APIs -->
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title">Backend & APIs</h3>
+            <!-- For each skill, create 5 blocks, filled based on level -->
+            <div class="skill-bar">
+              <span class="skill-bar__label">Python</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Django</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">DRF</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">FastAPI</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">WebSockets</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
           </div>
-        </article>
+
+          <!-- Category 2: Databases & Storage -->
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title">Databases & Storage</h3>
+            <div class="skill-bar">
+              <span class="skill-bar__label">PostgreSQL</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Redis</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Schema Design</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Indexing</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Infrastructure & DevOps -->
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title">Infrastructure & DevOps</h3>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Docker</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">AWS EC2</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Celery</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Nginx</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV3</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Core CS -->
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title">Core Computer Science</h3>
+            <div class="skill-bar">
+              <span class="skill-bar__label">DSA</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">System Design</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">OOP</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Networks</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-number">03. (experience & lore)</div>
+        <div class="quest-log reveal">
+          <div class="quest-log__header">⚔ Quest Log ⚔</div>
+          <div class="quest-log__body">
+            <div class="quest-entry">
+              <div class="quest-entry__status">[COMPLETED]</div>
+              <div class="quest-entry__content">
+                <h3>Freelance Technical Content Writer</h3>
+                <p class="quest-entry__org">Self-Employed, Remote · 2022 – 2024</p>
+                <p>Produced technical documentation and developer-facing content, demonstrating strong verbal ability and clear communication of complex technical concepts.</p>
+              </div>
+            </div>
+            <div class="quest-entry">
+              <div class="quest-entry__status">[COMPLETED]</div>
+              <div class="quest-entry__content">
+                <h3>B.E. Computer Science Engineering</h3>
+                <p class="quest-entry__org">Chandigarh University, Mohali · 2021 – 2025</p>
+                <p>Bachelor of Engineering in Computer Science</p>
+              </div>
+            </div>
+            <div class="quest-entry">
+              <div class="quest-entry__status">[LEGENDARY]</div>
+              <div class="quest-entry__content">
+                <h3>Achievements & Certifications</h3>
+                <ul class="quest-entry__achievements">
+                  <li>CAT 2025: 94th Percentile</li>
+                  <li>IBM Data Science Fundamentals</li>
+                  <li>Google Project Management</li>
+                  <li>Science Olympiad: Gold Medalist — Physics & Mathematics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section--alt">
+      <div class="container">
+        <div class="section-number">04. (about)</div>
+        <div class="about__grid reveal">
+          <img src="assets/images/pixel-avatar.jpg" alt="Harshit Verma" class="about__avatar">
+          <div class="about__text">
+            <p>I'm Harshit, a backend software engineer specializing in Python, Django, and Django REST Framework. I ship full-stack, production-grade applications end to end — from relational data modeling and REST API design to asynchronous task processing, real-time WebSocket systems, and containerized deployments on AWS.</p>
+            <p>My approach is systems-first: I design database schemas that scale, APIs that are intuitive, and infrastructure that's reliable. Whether it's implementing gender-ratio balancing algorithms, building real-time chat with Django Channels, or enforcing server-side price integrity at checkout — I focus on getting the architecture right.</p>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__number">2+</span>
+                <span class="stat__label">Production Apps</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">15+</span>
+                <span class="stat__label">API Endpoints</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">94th</span>
+                <span class="stat__label">CAT Percentile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" id="contact">
+      <div class="marquee__track">
+        <span class="marquee__text">Let's Build Together! ✦ </span>
+        <span class="marquee__text">Let's Build Together! ✦ </span>
+        <span class="marquee__text">Let's Build Together! ✦ </span>
+        <span class="marquee__text">Let's Build Together! ✦ </span>
+        <span class="marquee__text">Let's Build Together! ✦ </span>
+        <span class="marquee__text">Let's Build Together! ✦ </span>
       </div>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="section-label">// technical skills</div>
-      <h2>My <span class="gradient-text">toolkit</span></h2>
-      <div class="skills__grid">
-        
-        <div class="skill-category reveal reveal--left">
-          <div class="skill-category__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </div>
-          <h3 class="skill-category__title">Backend & APIs</h3>
-          <div class="skill-category__tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Django</span>
-            <span class="skill-tag">DRF</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">Django ORM</span>
-            <span class="skill-tag">JWT Auth</span>
-            <span class="skill-tag">Django Channels</span>
-            <span class="skill-tag">WebSockets</span>
-            <span class="skill-tag">REST API Design</span>
-          </div>
-        </div>
+  </main>
 
-        <div class="skill-category reveal reveal--right">
-          <div class="skill-category__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          </div>
-          <h3 class="skill-category__title">Databases & Storage</h3>
-          <div class="skill-category__tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">SQLite</span>
-            <span class="skill-tag">Query Optimization</span>
-            <span class="skill-tag">Indexing</span>
-            <span class="skill-tag">Transactions</span>
-            <span class="skill-tag">Row-Level Locking</span>
-            <span class="skill-tag">Schema Design</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal--left">
-          <div class="skill-category__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-          </div>
-          <h3 class="skill-category__title">Infrastructure & DevOps</h3>
-          <div class="skill-category__tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">AWS EC2</span>
-            <span class="skill-tag">Nginx</span>
-            <span class="skill-tag">Gunicorn</span>
-            <span class="skill-tag">Celery</span>
-            <span class="skill-tag">Redis Broker</span>
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Linux</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal--right">
-          <div class="skill-category__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-          </div>
-          <h3 class="skill-category__title">Core Computer Science</h3>
-          <div class="skill-category__tags">
-            <span class="skill-tag">Data Structures</span>
-            <span class="skill-tag">Algorithms</span>
-            <span class="skill-tag">System Design</span>
-            <span class="skill-tag">OOP</span>
-            <span class="skill-tag">CAP Theorem</span>
-            <span class="skill-tag">Load Balancing</span>
-            <span class="skill-tag">Computer Networks</span>
-            <span class="skill-tag">OS</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-label">// experience & education</div>
-      <h2>Where I've <span class="gradient-text">been</span></h2>
-      <div class="timeline">
-        
-        <div class="timeline__item reveal">
-          <div class="timeline__header">
-            <h3>Freelance Technical Content Writer</h3>
-            <span class="timeline__date">2022 – 2024</span>
-          </div>
-          <p class="timeline__subtitle">Self-Employed, Remote</p>
-          <div class="timeline__content">
-            <p>Produced technical documentation and developer-facing content, demonstrating strong verbal ability and clear communication of complex technical concepts.</p>
-          </div>
-        </div>
-
-        <div class="timeline__item reveal">
-          <div class="timeline__header">
-            <h3>B.E. Computer Science Engineering</h3>
-            <span class="timeline__date">2021 – 2025</span>
-          </div>
-          <p class="timeline__subtitle">Chandigarh University, Mohali</p>
-          <div class="timeline__content">
-            <p>Bachelor of Engineering in Computer Science</p>
-          </div>
-        </div>
-
-        <div class="timeline__item reveal">
-          <div class="timeline__header">
-            <h3>Achievements & Certifications</h3>
-          </div>
-          <div class="timeline__content">
-            <ul class="achievements">
-              <li>CAT 2025: 94th Percentile</li>
-              <li>IBM Data Science Fundamentals</li>
-              <li>Google Project Management</li>
-              <li>Science Olympiad: Gold Medalist in Physics & Mathematics</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section" style="text-align: center;">
-    <div class="container">
-      <h2 class="contact__title gradient-text reveal">Let's build something together</h2>
-      <div class="terminal reveal" style="max-width: 600px; margin: 2rem auto; text-align: left;">
-        <div class="terminal__header">
-          <span class="terminal__dot" style="background:#ff5f57"></span>
-          <span class="terminal__dot" style="background:#ffbd2e"></span>
-          <span class="terminal__dot" style="background:#28c840"></span>
-          <span class="terminal__title">contact.sh</span>
-        </div>
-        <div class="terminal__body">
-          <span class="terminal__line"><span class="terminal__prompt">$ </span>ssh harshit@hire.me</span>
-          <span class="terminal__line"><span class="terminal__output">→ Connection established.</span></span>
-          <span class="terminal__line"><span class="terminal__output">→ Welcome! Let's talk about your next project.</span></span>
-        </div>
-      </div>
-      
-      <div class="contact__links reveal">
-        <a href="mailto:a84476@gmail.com" class="social-link" aria-label="Email">
-          <span class="social-link__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </span>
-          <span class="social-link__text">a84476@gmail.com</span>
-        </a>
-        <a href="https://linkedin.com/in/harshit-verma-b27407214" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-          <span class="social-link__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </span>
-          <span class="social-link__text">LinkedIn</span>
-        </a>
-        <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-          <span class="social-link__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </span>
-          <span class="social-link__text">GitHub</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer id="footer">
     <div class="container">
-      <div class="footer__inner">
-        <div class="footer__text">
-          &copy; 2026 Harshit Verma. All rights reserved.
+      <div class="footer__grid">
+        <div class="footer__col">
+          <p class="footer__col-title">you've reached the end! (for now)</p>
+          <a href="#projects" class="footer__link">view projects</a>
+          <a href="#skills" class="footer__link">view skills</a>
+          <a href="#experience" class="footer__link">view experience</a>
         </div>
-        <div class="footer__built-with">
-          Built with HTML, CSS &amp; JS — no frameworks needed.
+        <div class="footer__col">
+          <p class="footer__col-title">explore some more!</p>
+          <a href="#" class="footer__link">back to top</a>
+          <a href="#about" class="footer__link">about</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">get in touch!</p>
+          <a href="mailto:harshitverma84476@gmail.com" class="footer__social">Email</a>
+          <a href="https://linkedin.com/in/harshit-verma-b27407214" target="_blank" rel="noopener" class="footer__social">LinkedIn</a>
+          <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="footer__social">GitHub</a>
         </div>
       </div>
+      <p class="footer__bottom">© 2026 Harshit Verma · Built with HTML, CSS & JS · No frameworks needed</p>
     </div>
   </footer>
 
