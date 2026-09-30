@@ -57,11 +57,11 @@
         <div class="hero__content">
           <div class="hero__text">
             <p class="hero__subtitle">Backend Software Engineer<span class="hero__cursor"></span></p>
-            <p class="hero__subtitle">Python · Django · PostgreSQL</p>
-            <p class="hero__subtitle">Building systems you never see</p>
+            <p class="hero__subtitle">Python · Django · FastAPI · PostgreSQL</p>
+            <p class="hero__subtitle">Building scalable systems, async pipelines & APIs</p>
             <div class="hero__badges">
               <span class="hero__badge">Available for work</span>
-              <span class="hero__badge hero__badge--teal">Gurugram, IN</span>
+              <span class="hero__badge hero__badge--teal">Gurgaon, IN</span>
               <span class="hero__badge hero__badge--orange">2025 Grad</span>
             </div>
           </div>
@@ -80,10 +80,11 @@
           <article class="project-card reveal">
             <div class="project-card__header">
               <h3 class="project-card__title">Blunt 2.0</h3>
-              <p class="project-card__subtitle">Category-Based Dating App — 2026</p>
+              <p class="project-card__subtitle">Category-Based Dating Web Application — Apr 2026</p>
             </div>
             <div class="project-card__body">
               <div class="project-card__badges">
+                <span class="project-card__badge">Python</span>
                 <span class="project-card__badge">Django</span>
                 <span class="project-card__badge">DRF</span>
                 <span class="project-card__badge">Channels</span>
@@ -94,11 +95,9 @@
               </div>
               <div class="project-card__description">
                 <ul>
-                  <li>Architected a modular DRF backend serving a decoupled React frontend over REST and WebSocket APIs across 7+ endpoints</li>
-                  <li>Designed a database-driven gender-ratio balancing system that gates signups per intent category using live seat counts</li>
-                  <li>Automated discovery with Celery Beat — daily pool regeneration at 8:00 AM IST, match expiration at midnight</li>
-                  <li>Built low-latency real-time messaging with Django Channels and Redis-backed WebSockets</li>
-                  <li>Implemented passwordless OTP auth via Twilio and stateless JWT with SimpleJWT</li>
+                  <li>Developed a Django REST Framework backend with 7+ REST/WebSocket endpoints for discovery, connections, and messaging.</li>
+                  <li>Implemented gender-ratio balancing across 3+ intent categories using database-driven seat counts and matching pools.</li>
+                  <li>Built real-time messaging with Django Channels + Redis, along with JWT, Twilio OTP authentication, and role-based access control.</li>
                 </ul>
               </div>
               <div class="terminal">
@@ -131,25 +130,23 @@
           <article class="project-card reveal">
             <div class="project-card__header project-card__header--teal">
               <h3 class="project-card__title">DarjiGhar</h3>
-              <p class="project-card__subtitle">Bespoke Tailoring E-Commerce — 2026</p>
+              <p class="project-card__subtitle">Bespoke Tailoring E-Commerce Platform — Aug 2026</p>
             </div>
             <div class="project-card__body">
               <div class="project-card__badges">
+                <span class="project-card__badge">Python</span>
                 <span class="project-card__badge">Django</span>
                 <span class="project-card__badge">DRF</span>
                 <span class="project-card__badge">React</span>
-                <span class="project-card__badge">LLM API</span>
                 <span class="project-card__badge">PostgreSQL</span>
                 <span class="project-card__badge">Docker</span>
-                <span class="project-card__badge">EC2</span>
+                <span class="project-card__badge">AWS EC2</span>
               </div>
               <div class="project-card__description">
                 <ul>
-                  <li>Built and deployed a full-stack e-commerce platform for custom tailoring on AWS EC2 with Docker, Nginx, and Gunicorn</li>
-                  <li>Designed relational data models and REST APIs for categories, products, customization options, measurements, carts, and orders</li>
-                  <li>Enforced server-side price integrity by recomputing order totals from database records, blocking client-side tampering</li>
-                  <li>Modeled dynamic collar, cuff, fabric customization with JSONField and optimized nested catalog queries</li>
-                  <li>Offloaded email notifications to Celery workers backed by Redis to keep request latency low</li>
+                  <li>Built and deployed a full-stack e-commerce platform with 10+ relational models covering catalog, customization, measurements, cart, and checkout.</li>
+                  <li>Implemented PostgreSQL transactions, row-level locking, and server-side price validation with historical price at purchase records.</li>
+                  <li>Added JWT authentication and 3+ Celery workflows using Redis for asynchronous processing and email notifications.</li>
                 </ul>
               </div>
               <div class="terminal">
@@ -181,6 +178,54 @@
               </div>
             </div>
           </article>
+
+          <!-- Project 3: Weather Vision API -->
+          <article class="project-card reveal">
+            <div class="project-card__header project-card__header--purple">
+              <h3 class="project-card__title">Weather Vision API</h3>
+              <p class="project-card__subtitle">Travel Data Aggregation Service — Sep 2026</p>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__badges">
+                <span class="project-card__badge">Python</span>
+                <span class="project-card__badge">FastAPI</span>
+                <span class="project-card__badge">AsyncIO</span>
+                <span class="project-card__badge">Gemini API</span>
+                <span class="project-card__badge">Pydantic</span>
+                <span class="project-card__badge">REST API</span>
+              </div>
+              <div class="project-card__description">
+                <ul>
+                  <li>Built a FastAPI travel service integrating weather and currency APIs through asynchronous Python.</li>
+                  <li>Used asyncio.gather for parallel API calls with in-memory TTL caching, currency resolution, and offline fallback.</li>
+                  <li>Integrated Gemini API with Pydantic validation and modular routers, services, models, and configuration.</li>
+                </ul>
+              </div>
+              <div class="terminal">
+                <div class="terminal__header">
+                  <span class="terminal__dot" style="background:#ff5f57"></span>
+                  <span class="terminal__dot" style="background:#ffbd2e"></span>
+                  <span class="terminal__dot" style="background:#28c840"></span>
+                  <span class="terminal__title">weather-vision.sh</span>
+                </div>
+                <div class="terminal__body">
+                  <span class="terminal__line"><span class="terminal__comment"># Parallel async travel aggregation</span></span>
+                  <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X GET /api/v1/travel/aggregate/?city=Tokyo</span>
+                  <span class="terminal__line"><span class="terminal__output">→ asyncio.gather: Weather + Currency APIs (TTL cache hit)</span></span>
+                  <span class="terminal__line"></span>
+                  <span class="terminal__line"><span class="terminal__comment"># AI destination synthesis</span></span>
+                  <span class="terminal__line"><span class="terminal__prompt">$ </span>curl -X POST /api/v1/travel/insights/</span>
+                  <span class="terminal__line"><span class="terminal__output">→ Gemini API synthesis validated via Pydantic schemas</span></span>
+                </div>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="project-card__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
         <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="view-more">(view more on github)</a>
       </div>
@@ -192,10 +237,9 @@
       <div class="container">
         <div class="section-number">02. (skill tree)</div>
         <div class="skills__grid">
-          <!-- Category 1: Backend & APIs -->
+          <!-- Category 1: Backend & AI -->
           <div class="skill-category reveal">
-            <h3 class="skill-category__title">Backend & APIs</h3>
-            <!-- For each skill, create 5 blocks, filled based on level -->
+            <h3 class="skill-category__title">Backend & AI Architecture</h3>
             <div class="skill-bar">
               <span class="skill-bar__label">Python</span>
               <div class="skill-bar__track">
@@ -208,18 +252,7 @@
               <span class="skill-bar__level">MAX</span>
             </div>
             <div class="skill-bar">
-              <span class="skill-bar__label">Django</span>
-              <div class="skill-bar__track">
-                <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block filled"></span>
-              </div>
-              <span class="skill-bar__level">MAX</span>
-            </div>
-            <div class="skill-bar">
-              <span class="skill-bar__label">DRF</span>
+              <span class="skill-bar__label">Django / DRF</span>
               <div class="skill-bar__track">
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
@@ -236,12 +269,12 @@
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block"></span>
+                <span class="skill-bar__block filled"></span>
               </div>
-              <span class="skill-bar__level">LV4</span>
+              <span class="skill-bar__level">MAX</span>
             </div>
             <div class="skill-bar">
-              <span class="skill-bar__label">WebSockets</span>
+              <span class="skill-bar__label">REST & Sockets</span>
               <div class="skill-bar__track">
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
@@ -251,11 +284,30 @@
               </div>
               <span class="skill-bar__level">LV4</span>
             </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">LLMs & GenAI</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">LLM APIs</span>
+              <span class="skill-tag">RAG</span>
+              <span class="skill-tag">Agentic AI</span>
+              <span class="skill-tag">JWT Auth</span>
+              <span class="skill-tag">WebSockets</span>
+              <span class="skill-tag">Pydantic</span>
+            </div>
           </div>
 
-          <!-- Category 2: Databases & Storage -->
+          <!-- Category 2: Databases & Distributed -->
           <div class="skill-category reveal">
-            <h3 class="skill-category__title">Databases & Storage</h3>
+            <h3 class="skill-category__title">Databases & Distributed</h3>
             <div class="skill-bar">
               <span class="skill-bar__label">PostgreSQL</span>
               <div class="skill-bar__track">
@@ -274,9 +326,20 @@
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block"></span>
+                <span class="skill-bar__block filled"></span>
               </div>
-              <span class="skill-bar__level">LV4</span>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Celery & Beat</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
             </div>
             <div class="skill-bar">
               <span class="skill-bar__label">Schema Design</span>
@@ -290,7 +353,7 @@
               <span class="skill-bar__level">MAX</span>
             </div>
             <div class="skill-bar">
-              <span class="skill-bar__label">Indexing</span>
+              <span class="skill-bar__label">Caching & Jobs</span>
               <div class="skill-bar__track">
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
@@ -300,11 +363,19 @@
               </div>
               <span class="skill-bar__level">LV4</span>
             </div>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">Background Tasks</span>
+              <span class="skill-tag">Row-Level Locking</span>
+              <span class="skill-tag">Transactions</span>
+            </div>
           </div>
 
-          <!-- Category 3: Infrastructure & DevOps -->
+          <!-- Category 3: Cloud, DevOps & Testing -->
           <div class="skill-category reveal">
-            <h3 class="skill-category__title">Infrastructure & DevOps</h3>
+            <h3 class="skill-category__title">Cloud, DevOps & Testing</h3>
             <div class="skill-bar">
               <span class="skill-bar__label">Docker</span>
               <div class="skill-bar__track">
@@ -328,32 +399,50 @@
               <span class="skill-bar__level">LV4</span>
             </div>
             <div class="skill-bar">
-              <span class="skill-bar__label">Celery</span>
+              <span class="skill-bar__label">Linux & Nginx</span>
               <div class="skill-bar__track">
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
               </div>
-              <span class="skill-bar__level">MAX</span>
+              <span class="skill-bar__level">LV4</span>
             </div>
             <div class="skill-bar">
-              <span class="skill-bar__label">Nginx</span>
+              <span class="skill-bar__label">CI/CD Actions</span>
               <div class="skill-bar__track">
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block"></span>
+                <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block"></span>
               </div>
-              <span class="skill-bar__level">LV3</span>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">Testing & QA</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block"></span>
+              </div>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Gunicorn</span>
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">PyTest</span>
+              <span class="skill-tag">Django TestCase</span>
+              <span class="skill-tag">Postman</span>
             </div>
           </div>
 
-          <!-- Category 4: Core CS -->
+          <!-- Category 4: Core CS, Languages & Frontend -->
           <div class="skill-category reveal">
-            <h3 class="skill-category__title">Core Computer Science</h3>
+            <h3 class="skill-category__title">Core CS & Languages</h3>
             <div class="skill-bar">
               <span class="skill-bar__label">DSA</span>
               <div class="skill-bar__track">
@@ -388,15 +477,34 @@
               <span class="skill-bar__level">MAX</span>
             </div>
             <div class="skill-bar">
-              <span class="skill-bar__label">Networks</span>
+              <span class="skill-bar__label">SQL</span>
               <div class="skill-bar__track">
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block filled"></span>
-                <span class="skill-bar__block"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+              </div>
+              <span class="skill-bar__level">MAX</span>
+            </div>
+            <div class="skill-bar">
+              <span class="skill-bar__label">C / C++</span>
+              <div class="skill-bar__track">
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
+                <span class="skill-bar__block filled"></span>
                 <span class="skill-bar__block"></span>
               </div>
-              <span class="skill-bar__level">LV3</span>
+              <span class="skill-bar__level">LV4</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">DBMS</span>
+              <span class="skill-tag">Operating Systems</span>
+              <span class="skill-tag">Networks</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Vite</span>
             </div>
           </div>
         </div>
@@ -410,19 +518,43 @@
           <div class="quest-log__header">⚔ Quest Log ⚔</div>
           <div class="quest-log__body">
             <div class="quest-entry">
-              <div class="quest-entry__status">[COMPLETED]</div>
+              <div class="quest-entry__status">[INTERNSHIP]</div>
               <div class="quest-entry__content">
-                <h3>Freelance Technical Content Writer</h3>
-                <p class="quest-entry__org">Self-Employed, Remote · 2022 – 2024</p>
-                <p>Produced technical documentation and developer-facing content, demonstrating strong verbal ability and clear communication of complex technical concepts.</p>
+                <h3>Intern — Voice-Based Virtual Assistant QA</h3>
+                <p class="quest-entry__org">Maruti Suzuki India Limited · 19 Jun 2026 – 16 Jul 2026 · India</p>
+                <p>Worked on a voice-based virtual assistant test application covering car feature functioning and development methodology under the QA-NDT/QA department.</p>
+              </div>
+            </div>
+            <div class="quest-entry">
+              <div class="quest-entry__status">[EXPERIENCE]</div>
+              <div class="quest-entry__content">
+                <h3>Product Marketing Executive</h3>
+                <p class="quest-entry__org">Amkette – EvoFox · 2026 · India</p>
+                <p>Supported product research, competitor analysis, and positioning for EvoFox gaming products.</p>
               </div>
             </div>
             <div class="quest-entry">
               <div class="quest-entry__status">[COMPLETED]</div>
               <div class="quest-entry__content">
-                <h3>B.E. Computer Science Engineering</h3>
-                <p class="quest-entry__org">Chandigarh University, Mohali · 2021 – 2025</p>
-                <p>Bachelor of Engineering in Computer Science</p>
+                <h3>Freelance Technical Writer</h3>
+                <p class="quest-entry__org">Self-Employed · 2022 – 2024 · Remote</p>
+                <p>Created developer-focused technical content and translated complex software concepts into clear explanations for technical and non-technical audiences.</p>
+              </div>
+            </div>
+            <div class="quest-entry">
+              <div class="quest-entry__status">[EDUCATION]</div>
+              <div class="quest-entry__content">
+                <h3>B.E. in Computer Science Engineering</h3>
+                <p class="quest-entry__org">Chandigarh University, Mohali · 2021 – 2025 · CGPA: 6.65/10</p>
+                <p>Bachelor of Engineering in Computer Science Engineering.</p>
+              </div>
+            </div>
+            <div class="quest-entry">
+              <div class="quest-entry__status">[EDUCATION]</div>
+              <div class="quest-entry__content">
+                <h3>Class XII (Science) — 92%</h3>
+                <p class="quest-entry__org">St. Crispin’s Sr. Sec. School · 2021 · Gurugram, India</p>
+                <p>Senior Secondary Education (Science Stream) with 92% aggregate.</p>
               </div>
             </div>
             <div class="quest-entry">
@@ -430,7 +562,7 @@
               <div class="quest-entry__content">
                 <h3>Achievements & Certifications</h3>
                 <ul class="quest-entry__achievements">
-                  <li>CAT 2025: 94th Percentile</li>
+                  <li>Common Admission Test (CAT) 2026: 94th Percentile (Gurugram, India)</li>
                   <li>IBM Data Science Fundamentals</li>
                   <li>Google Project Management</li>
                   <li>Science Olympiad: Gold Medalist — Physics & Mathematics</li>
@@ -448,15 +580,15 @@
         <div class="about__grid reveal">
           <img src="assets/images/pixel-avatar.jpg" alt="Harshit Verma" class="about__avatar">
           <div class="about__text">
-            <p>I'm Harshit, a backend software engineer specializing in Python, Django, and Django REST Framework. I ship full-stack, production-grade applications end to end — from relational data modeling and REST API design to asynchronous task processing, real-time WebSocket systems, and containerized deployments on AWS.</p>
-            <p>My approach is systems-first: I design database schemas that scale, APIs that are intuitive, and infrastructure that's reliable. Whether it's implementing gender-ratio balancing algorithms, building real-time chat with Django Channels, or enforcing server-side price integrity at checkout — I focus on getting the architecture right.</p>
+            <p>I'm Harshit, a backend software engineer based in Gurgaon, Haryana, specializing in Python, Django, FastAPI, and distributed systems. I ship production-grade architectures end to end — from relational data modeling and high-throughput REST/WebSocket APIs to asynchronous task queues with Celery, LLM integrations with Gemini, and containerized deployments on AWS EC2.</p>
+            <p>My approach is systems-first: I design database schemas that scale, APIs that are clean and intuitive, and infrastructure that's resilient. Whether it's implementing database-driven gender-ratio algorithms, building real-time chat with Django Channels, or orchestrating parallel async travel aggregations with FastAPI — I focus on getting the architecture right.</p>
             <div class="about__stats">
               <div class="stat">
-                <span class="stat__number">2+</span>
+                <span class="stat__number">3+</span>
                 <span class="stat__label">Production Apps</span>
               </div>
               <div class="stat">
-                <span class="stat__number">15+</span>
+                <span class="stat__number">20+</span>
                 <span class="stat__label">API Endpoints</span>
               </div>
               <div class="stat">
@@ -498,6 +630,7 @@
         </div>
         <div class="footer__col">
           <p class="footer__col-title">get in touch!</p>
+          <a href="tel:+919311631709" class="footer__social">+91-9311631709</a>
           <a href="mailto:harshitverma84476@gmail.com" class="footer__social">Email</a>
           <a href="https://linkedin.com/in/harshit-verma-b27407214" target="_blank" rel="noopener" class="footer__social">LinkedIn</a>
           <a href="https://github.com/dverrma1312" target="_blank" rel="noopener" class="footer__social">GitHub</a>

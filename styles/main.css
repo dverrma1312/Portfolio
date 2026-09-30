@@ -677,6 +677,32 @@ h3, .h3 {
   color: var(--text-secondary);
 }
 
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  transition: border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.skill-tag:hover {
+  border-color: var(--accent-1);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
 /* ==========================================================================
    10. Experience Section
    ========================================================================== */
